@@ -1,0 +1,300 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;  
+}
+
+/* nav bar */
+
+nav{
+
+	padding: 30px;
+}
+
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+nav li{
+	display: inline;
+}
+
+nav li a{
+
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #737373;
+}
+
+nav a.NavTitle{
+	position: absolute;
+	top: 5px;
+	right: 50%;
+	color: #a9a9a9;
+	font-size: 50px;
+	text-align: center;
+}
+
+
+
+/* End of nav*/
+
+/* Home Page*/
+
+body{
+	background-color: #222222;
+	/*background-image: url("img/food_icon2.png");*/
+}
+
+.homeback{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height:100vh;
+	/*margin: -8px;
+	padding: 300px 100px;*/
+
+}
+
+.homeback::before{
+	content:'';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-image: url(ref/BEN_7622.jpeg);
+	background-size: cover;
+	background-position: top center;
+	opacity: 0.5;
+}
+
+.HLogo{
+	position: relative;
+	width: 300px;
+}
+
+.logo{
+	display: block;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	border-radius: 15px;
+	opacity: 50%;
+}
+
+.overlay{
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.HLogo:hover .overlay{
+	opacity: 1;
+}
+
+.CodeLogo { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.Menu{
+	color: #a9a9a9;
+}
+
+.MenuLay{
+	padding: 50px;
+	margin: 50px;
+	height: auto;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 10px;
+}
+
+.card {
+  box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+  background-color: #1A2F38;
+  color: white;
+  height: 400px;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-img{
+	width: 200px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.AboutUs {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  box-sizing: border-box;
+}
+
+#myVideo {
+  position: relative;
+  left: 175px;
+  width: 75%; 
+  height: 75%;
+}
+
+.VContent {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+#myBtnM {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtnM:hover {
+  background: #ddd;
+  color: black;
+}
+
+.card-text{
+	padding: 15px;
+	padding-top: 5px;
+}
+
+.card-header{
+	padding: 10px;
+}
+
+/*End of Home*/
+
+/*Menu buttons*/
+
+.MenuButton{
+	background-color: black;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 25px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+
+/*End of buttons*/
+
+/*footer*/
+.Social{
+	margin-top: 20px;
+	background-color: #262322;
+	height: auto;
+}
+
+.Social h1{
+	color: white;
+	font-size: 50;
+}
+
+.Social ul{
+	margin: auto;
+	width: 50%;
+	height: 10%;
+	list-style-type: none;
+	padding-top: 15px;
+}
+
+.Social li a{
+	color: white;
+	padding: 14px 16px;
+}
+
+.Social li{
+	display: inline;
+}
+
+.Social a{
+	font-size: 1em;
+	text-decoration: none;
+}
+
+/*end footer*/
+
+/*Menu*/
+
+#btnIndex{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	font-size: 4em;
+	border-radius: 50%;
+	color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0, 0.25);
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#btnIndex:active{
+	color: gray;
+}
+
+.btnIndex{
+	display: none;
+}
+
+#btnIndex:hover p{
+	display: block;
+	
+}
+
+/*End of Menu*/
+
