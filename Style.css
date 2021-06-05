@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;  
+	box-sizing: border-box; 
+	font-family: 'Poiret One', cursive;
 }
 
 /* nav bar */
@@ -47,44 +50,98 @@ nav a.NavTitle{
 	text-align: center;
 }
 
-
-
 /* End of nav*/
 
 /* Home Page*/
 
 body{
 	background-color: #222222;
-	/*background-image: url("img/food_icon2.png");*/
+	background-image: url("ref/background.png");
+	background-size: cover;
 }
 
 .homeback{
 	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height:100vh;
-	/*margin: -8px;
-	padding: 300px 100px;*/
-
+	margin: auto;
+	width: 100%;
 }
 
-.homeback::before{
-	content:'';
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	background-image: url(ref/BEN_7622.jpeg);
-	background-size: cover;
-	background-position: top center;
-	opacity: 0.5;
+.mySlides {
+	display: none;	
+}
+
+img {
+	vertical-align: middle;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+/* Number text (1/7 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  display: none;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 .HLogo{
 	position: relative;
 	width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .logo{
@@ -123,7 +180,7 @@ body{
 }
 
 .Menu{
-	color: #a9a9a9;
+	color: white;
 }
 
 .MenuLay{
@@ -139,7 +196,7 @@ body{
 .card {
   box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5);
   transition: 0.3s;
-  background-color: #1A2F38;
+  background-color: #212121;
   color: white;
   height: 400px;
   border-radius: 5px 5px 0 0;
@@ -199,11 +256,6 @@ body{
   cursor: pointer;
 }
 
-#myBtnM:hover {
-  background: #ddd;
-  color: black;
-}
-
 .card-text{
 	padding: 15px;
 	padding-top: 5px;
@@ -230,12 +282,20 @@ body{
 	border-radius: 12px;
 }
 
+.MenuButton:hover{
+	background-color: gray;
+}
+
+.MenuButton:active{
+	background-color: white;
+}
+
 /*End of buttons*/
 
 /*footer*/
 .Social{
 	margin-top: 20px;
-	background-color: #262322;
+	background-color: black;
 	height: auto;
 }
 
@@ -250,6 +310,7 @@ body{
 	height: 10%;
 	list-style-type: none;
 	padding-top: 15px;
+	overflow: hidden;
 }
 
 .Social li a{
@@ -259,11 +320,14 @@ body{
 
 .Social li{
 	display: inline;
+	border-right: 1px solid #bbb;
+
 }
 
 .Social a{
 	font-size: 1em;
 	text-decoration: none;
+	height: 1000px;
 }
 
 /*end footer*/
@@ -292,8 +356,7 @@ body{
 }
 
 #btnIndex:hover p{
-	display: block;
-	
+	display:inline-block;
 }
 
 /*End of Menu*/
